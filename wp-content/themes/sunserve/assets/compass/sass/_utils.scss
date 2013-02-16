@@ -1,0 +1,50 @@
+
+$sky-blue: #9bd1f7;
+$royal-blue: #2087ca;
+$yellow: #fff61b;
+$text: #333;
+$stripe-large: 125px;
+$linkColor: $royal-blue;
+$linkColorHover: #fff;
+$btnPrimaryBackground: $royal-blue;
+$navbarCollapseWidth: 768px;
+$experimental-support-for-svg: true;
+
+@import "bootstrap";
+@import "bootstrap-responsive";
+
+@import "compass/css3";
+
+
+
+
+@mixin breakpoint($point) {
+  @if $point == papa-bear {
+    @media (min-width: 1200px) { @content; }
+  }
+  @else if $point == mama-bear {
+    @media (min-width: 768px) { @content; }
+  }
+  @else if $point == baby-bear {
+    @media (max-width: 480px)  { @content; }
+  }
+}
+
+@mixin box-shadow-main {
+     @include box-shadow(0 1px 3px rgba(0,0,0,0.3));
+}
+
+
+
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+.centered-header {
+    text-align: center;
+    margin-bottom: 20px;
+}

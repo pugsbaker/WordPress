@@ -1,0 +1,127 @@
+.inner-shadow {
+    display: block;
+    position: absolute;
+    top: 5px;
+    width: 40px;
+    height: 100%;
+    background: url(../img/inner-shadow.png) no-repeat;
+    z-index: 11;
+}
+
+.inner-shadow-left {
+    @extend .inner-shadow;
+    left: -25px;
+}
+
+.inner-shadow-right {
+    @extend .inner-shadow;
+    right: -25px;
+}
+
+.carousel {
+    z-index: 1;
+    margin:0; 
+    overflow: hidden;
+    
+    .container {
+        position: relative;
+    }
+    
+    .item {
+        background: $sky-blue;
+        margin: 5px 0;
+        height: 250px;
+        @include box-shadow(0 1px 3px rgba(0,0,0,0.3));
+        
+        @include breakpoint(mama-bear) {
+            height: 315px;
+            li {
+                margin-right: 10px;
+            }
+        }
+        
+    }
+    
+    img {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        max-width: none;
+        min-width: 100%;
+        height: 250px;
+        opacity: 0.3;
+        
+        @include breakpoint(mama-bear) {
+            height: 315px;
+            opacity: 1;
+        }
+        
+        
+        
+    }
+}
+
+.carousel-control {
+    height: 40px;
+    width: 50px;
+    left: 0;
+    margin-top: 0;
+    font-size: 60px;
+    top: 80%;
+    background-color: $sky-blue;
+    opacity: 1;
+    border: 0;
+    color: #fff;
+    @include single-transition(padding, 0.1s, ease-in-out, 0);
+    border-radius: 0;
+    @include box-shadow(0 1px 3px rgba(0,0,0,0.3));
+    
+    
+}
+.carousel-control.right {
+    right: 0;
+    
+    &:hover { padding-right: 3px;  }
+    &:active {padding-right: 10px; }
+}
+.carousel-control.left {
+    &:hover { padding-left: 3px; }
+    &:active {padding-left: 10px; }
+}
+
+.carousel-caption {
+    background-color: transparent;
+    position: static;
+    max-width: 550px;
+    padding: 0 20px;
+    margin-top: 50px;
+    margin-left: 3%;
+    @include breakpoint(mama-bear) {
+        margin-top: 60px;
+    }
+    
+    h1 {
+        font-family: "GeoMedium";
+        font-size: 40px;
+        line-height: 1;
+        font-weight: normal;
+        color: $royal-blue;
+        margin: 0;
+        text-shadow: 0 1px 3px rgba(0,0,0,0.3);
+        @include breakpoint(mama-bear) { font-size: 60px; }
+        @include breakpoint(baby-bear) { font-size: 30px; }
+    }
+    
+    .lead {
+        font-size: 18px;
+        margin: 0;
+        line-height: 1.3;
+        color: $yellow;
+        text-shadow: 0 1px 3px rgba(0,0,0,0.3);
+        
+        @include breakpoint(baby-bear) { font-size: 16px; }
+    }
+    .btn {
+        margin-top: 10px;
+    }
+}

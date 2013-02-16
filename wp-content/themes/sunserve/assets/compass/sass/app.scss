@@ -1,0 +1,300 @@
+@import "utils";
+@import "type";
+@import "header";
+@import "carousel";
+@import "stores";
+/* ==========================================================================
+    Base
+========================================================================== */
+
+body {
+    background-color: #fff;
+    @include background-image(linear-gradient(0, $yellow 50%, transparent 50%, transparent));
+    @include background-size($stripe-large $stripe-large);
+    font-family: "GeoLite";
+    padding: 0;
+}
+.lt-ie9 body {
+    background-image: url(../img/bg_stripe.gif);
+}
+
+.hang-tag {
+    background: $sky-blue url(../img/small-stripe.png) bottom repeat-x;
+    @include box-shadow-main;
+}
+
+
+.hero-unit {
+    background: none;
+}
+
+
+
+
+
+
+
+/* ==========================================================================
+    Content
+========================================================================== */
+
+.content {
+    background: #fff;
+    padding-top: 20px;
+    
+    @include box-shadow-main;
+}
+
+.content-row {
+    margin-bottom: 20px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid $yellow;
+}
+.page-header {
+    border-color: $yellow;
+    padding-bottom: 0;
+    margin-top: 50px;
+}
+
+.main h1 {
+    color: $royal-blue;
+    font-size: 30px;
+    
+    font-family: 'GeoLite';
+    margin-top:0;
+    text-transform: uppercase;
+}
+
+
+.info {
+    background: url(../img/icons.png) no-repeat;
+    padding-left: 30px;
+    padding-top: 5px;
+    margin-bottom: 5px;
+    
+    min-height: 25px;
+    border-bottom: 1px solid $yellow;
+    font-size: 13px;
+}
+.info.address {
+    background-position: 0 -45px;
+}
+.info.website {
+    background-position: 0 3px ;
+}
+.info.directions {
+    background-position: 0 -93px;
+}
+
+/* ==========================================================================
+    Primary Content
+========================================================================== */
+
+.main { 
+    padding: 30px;
+}
+
+.intro {
+    font-family: 'GeoMedium';
+    
+}
+.social {
+    
+    padding-left: 50px;
+    
+    margin-bottom: 10px;
+    background: url(../img/Facebook.png) no-repeat;
+    &:hover {
+        background:url(../img/Facebook_over.png) no-repeat
+    }
+    p {
+        font-family: 'Jinky';
+        font-size: 30px;
+        color: $royal-blue;
+        text-transform: uppercase;
+    }
+    .fb-like {
+        
+    }
+}
+
+
+/* ==========================================================================
+    Sidebar
+========================================================================== */
+
+.sidebar {
+    padding: 30px;
+    padding-left: 0;
+}
+
+.feature-section {
+    background: $sky-blue;
+    @include box-shadow-main;
+    
+    margin-bottom: 10px;
+    .feature-header {
+        position:relative;
+        height: 100px;
+        overflow:hidden;
+        img {
+            
+        }
+    }
+    .feature-content {
+        padding: 10px;
+        
+    }
+    
+    h3 {
+        position: absolute;
+        display:block;
+        background: $yellow;
+        
+        padding-left: 20px;
+        font-family: 'Jinky';
+        font-size: 30px;
+        color: $royal-blue;
+        width: 50%;
+    }
+}
+
+
+.widget {
+    @include clearfix;
+    background: $sky-blue;
+    @include box-shadow-main;
+   
+    margin-bottom: 10px;
+    
+    h3 {
+       
+        display:block;
+        background: $yellow;
+        z-index: 5;
+        padding-left: 20px;
+        font-family: 'Jinky';
+        font-size: 30px;
+        color: $royal-blue;
+        width: 70%;
+    }
+}
+.wppl_widget {
+    
+    background: $sky-blue url(../img/store.jpg) right no-repeat;
+    background-size:200%;
+    
+    @include breakpoint(mama-bear){background-size:150%;}
+}
+.widget-inner {
+   
+}
+.wppl-widget-form-wrapper {
+     @include box-sizing(border-box);
+     padding:20px;
+}
+
+.wppl-widget-form .wppl-address-wrapper  {
+     @extend .span12;
+    
+}
+.wppl-widget-form .wppl-address-wrapper input[type="text"] {
+   
+    @include box-shadow(none);
+    color:$royal-blue;
+}
+
+.wppl-widget-form .wppl-address-field-wrapper {
+    
+    width:90%;
+    background: #fff;
+    padding: 4px;
+    
+}
+.wppl-search-submit {
+    @extend .btn;
+    @extend .btn-primary;
+}
+.wppl-widget-form .wppl-locate-button-wrapper {
+    top: 5px;
+    right: 20px;
+    left: auto;
+}
+.btn {
+    @include border-radius(4px);
+}
+.item-header {
+        position:relative;
+       
+        padding-top: 20px;
+    }
+
+.item {
+    background: $sky-blue;
+    @include box-shadow-main;
+    
+    margin-bottom: 10px;
+    .item-header {
+        position:relative;
+        height: 150px;
+        overflow:hidden;
+        img {
+            
+        }
+    }
+    .item-content {
+        padding: 10px;
+        
+    }
+    
+    h3 {
+        position: absolute;
+        display:block;
+        background: $yellow;
+        z-index: 5;
+        padding-left: 20px;
+        font-family: 'Jinky';
+        font-size: 30px;
+        color: $royal-blue;
+        width: 50%;
+    }
+}
+
+/* ==========================================================================
+    Posts
+========================================================================== */
+
+.hentry header { }
+.hentry time { }
+.hentry p.byline { }
+.hentry .entry-content { }
+.hentry footer { }
+
+
+
+/* ==========================================================================
+    Footer
+========================================================================== */
+
+.content-info { 
+    @extend .hang-tag;
+    height: 200px;
+    
+    margin-bottom: 50px;
+    margin-top:0px;
+    z-index:-1;
+   
+}
+
+
+
+/* ==========================================================================
+    WordPress Generated Classes
+    See: http://codex.wordpress.org/CSS#WordPress_Generated_Classes
+========================================================================== */
+
+.aligncenter { display: block; margin: 0 auto; }
+.alignleft { float: left; }
+.alignright { float: right; }
+figure.alignnone { margin-left: 0; margin-right: 0; }
+

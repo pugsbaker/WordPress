@@ -1,0 +1,133 @@
+#banner { 
+    position: relative;
+    margin: 0;
+    padding-bottom: 5px;
+    min-height: 40px;
+    background: url(../img/sky.jpg) bottom center repeat-x;
+    @include box-shadow(0 1px 3px rgba(0,0,0,0.3));
+}
+
+.nav-wrapper {
+    position: relative;
+    z-index: 10;
+    margin-top:0;
+    margin-bottom: 0;
+}
+
+.nav-brand-wrapper {
+    padding: 0 5%;
+    
+        @include breakpoint(mama-bear) {
+            padding: 0 40px;
+        }
+}
+
+
+.nav-collapse 
+{
+    @include box-shadow(0 1px 3px rgba(0,0,0,0.3));
+    .nav {
+        margin:0;
+    }
+}
+
+
+.navbar {
+    margin-bottom: -30px;
+    background: transparent;
+    
+        .nav {
+                    @include breakpoint(mama-bear) {
+                        float:right;
+                                    li {
+                                        margin-right:10px
+                                    }
+                    }
+        }
+    
+    .nav > li > a {
+        @extend .hang-tag;
+        margin: 0;
+        padding-top: 20px;
+        padding-bottom: 15px;
+        font-family: "geoMedium"; 
+        font-size: 16px;
+        color: $royal-blue;
+        text-transform: uppercase;
+        text-shadow:none;
+        text-align:center;
+        @include border-radius(0);
+        @include transition-property(padding, background-color);
+        @include transition-duration(0.3s);
+        
+        &:hover {
+            @extend .hang-tag;
+            background-color: $royal-blue;
+            color: #fff;
+        }
+        
+        @include breakpoint(mama-bear) {
+            &:hover { padding-top: 30px;  }
+        }
+        
+    }
+    .nav > .active > a {
+        @extend .hang-tag;
+        color: $royal-blue;
+        background-color: $royal-blue;
+        padding-top: 25px;
+        &:hover {
+            padding-top: 25px;
+            @extend .hang-tag;
+            background-color: $royal-blue;
+            color: $royal-blue;
+        }
+    }
+    
+    .navbar-inner  {
+        background: transparent;
+        border: none;
+        padding: 0;
+        @include box-shadow(none);
+        filter: none;
+    }
+    
+    .brand {
+        width: 100px;
+        padding: 12px 0 15px 10px;
+        background: $sky-blue url(../img/small-stripe.png) bottom repeat-x;
+        @include box-shadow(0 1px 3px rgba(0,0,0,0.3));
+        
+        >img {
+            width: 90%;
+        }
+        
+        @include breakpoint(mama-bear) {
+            width: 180px;
+            padding: 12px 0 25px 20px;
+        }
+        
+    }
+    
+    .btn-navbar {
+        @extend .hang-tag;
+        padding:15px 10px;
+        margin:0;
+        @include single-transition(padding, 0.3s, ease-in-out, 0);
+        border:none;
+        &:hover {
+            background: $sky-blue url(../img/small-stripe.png) bottom repeat-x;
+            padding-top: 20px;
+            @include box-shadow(0 1px 3px rgba(0,0,0,0.3));
+        }
+        .icon-bar {
+            width: 25px;
+            @include box-shadow(none);
+            @include border-radius(1px);
+            background: #fff;
+            
+        }
+    }
+    
+    
+}

@@ -1,0 +1,159 @@
+@import 'stores-single';
+
+
+/* ///////  PAGINATIONS /////////// */
+.wppl-pagination-wrapper {
+   
+   @extend .row-fluid;
+   
+}
+
+#wppl-output-wrapper .wppl-pagination-wrapper h2.wppl-h2 {
+   
+    font-size: 12px;
+    margin: 0;
+    text-transform: none;
+    
+}
+
+.wppl-pagination-holder {	
+   
+   @include clearfix;
+    
+    margin-bottom: 10px;
+   
+    
+}
+
+#wppl-output-wrapper .wppl-pagination {
+    text-align: center;
+}
+
+#wppl-output-wrapper .wppl-pagination a {
+    float:left;
+    margin-right:2px;	
+    height: 30px;
+    width: 15px;
+}
+
+#wppl-output-wrapper .wppl-pagination a:link, #wppl-output-wrapper .wppl-pagination a:visited {
+    color: $royal-blue;
+    font-family: 'Jinky';
+    font-size: 32px;
+    line-height: 0.3;
+    padding: 0 5px;
+    background: $sky-blue;
+    @include box-shadow-main;
+    text-decoration: none;
+}
+
+#wppl-output-wrapper .wppl-pagination a:hover, #wppl-output-wrapper .wppl-pagination a:active {
+    color: #fff;
+    background:$royal-blue;
+}
+#wppl-output-wrapper .prev-btn, #wppl-output-wrapper .next-btn {
+     text-align: center;
+}
+
+#wppl-output-wrapper .prev-btn a:link, #wppl-output-wrapper .prev-btn a:visited, #wppl-output-wrapper .next-btn a:link, #wppl-output-wrapper .next-btn a:visited {
+    padding: 0px 4px !important;
+    background: $sky-blue;
+    @include box-shadow-main;
+    float: left;
+    margin-right:2px;	
+    height: 30px;
+    width: 15px;
+    font-size: 40px;
+   text-decoration: none;
+   color: #fff;
+  
+}
+
+#wppl-output-wrapper .prev-btn a:hover, #wppl-output-wrapper .prev-btn a:active, #wppl-output-wrapper .next-btn a:hover, #wppl-output-wrapper .next-btn a:active {
+     color: #fff;
+    background:$royal-blue;
+}
+
+#wppl-output-wrapper .wppl-pagination .current a {
+   color: #fff;
+    background:$royal-blue;
+    
+}
+
+/* /////// RESUALTS //////// */
+
+div#wppl-output-wrapper {
+    @extend .container;
+}
+
+#wppl-output-wrapper #show-hide-btn-wrapper {
+   display: none;
+}
+
+.wppl-info-window-thumb {
+    width: 130px !important;
+    margin-right: 10px;
+}
+.wppl-info-window-thumb img {
+    width: auto !important;
+    height: auto !important;
+    max-width: 100% !important;
+}
+#wppl-hide-map {
+    width: 100%;
+}
+
+.wppl-map-wrapper {	
+    position:relative;
+    width: 100%;
+    margin-bottom: 10px;
+    
+}
+#wppl-pt-map {
+    position:relative;
+    width: 100%;
+    height: 400px;
+}
+.wppl-results-wrapper {	
+    @extend .row-fluid;
+    width:100%;
+    
+}	
+
+#wppl-go-top {
+    background: $sky-blue;
+    text-align: center;
+    margin-top: 1px;
+    cursor: pointer;
+    color: $royal-blue;
+    
+    float: right;
+    
+    padding: 3px 10px;
+    @include box-shadow-main;
+}
+
+.wppl-form-wrapper {
+    
+   float:none;
+}
+.wppl-form {
+    @extend .row-fluid;
+}
+.wppl-category-wrapper {
+    @extend .span3;
+}
+.wppl-address-wrapper  {
+     @extend .span4;
+}
+#retailer_category_cat > label {
+    display:none;
+}
+.wppl-category-wrapper div {
+    margin:0;
+    float:none;
+}
+
+.wppl-distance-wrapper {
+    @extend .span3;
+}

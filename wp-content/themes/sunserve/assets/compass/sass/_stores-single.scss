@@ -1,0 +1,130 @@
+.wppl-single-result {
+    @extend .hang-tag;
+    padding:0;
+    margin: 0;
+    margin-bottom: 10px;
+    position: relative;
+        
+    
+   
+    
+    
+    
+    .wppl-title-holder {
+        padding: 15px 10px 0;
+    }
+    
+    h3.wppl-h3 {
+        
+        margin-bottom: 0;
+        a:hover, a:active {
+            color: #fff;
+            text-decoration: none;
+        }
+        
+        span {
+            
+        }
+    }
+    
+    .wppl-thumb {
+        position: relative;
+        width:100%;
+        height:200px;
+        margin:0;
+        padding:0;
+        overflow: hidden;
+        
+        @include breakpoint(mama-bear) {height:120px;}
+        @include breakpoint(papa-bear) {height:200px;}
+        img {
+            position: absolute;
+            bottom: 0;
+            max-width: 100%;
+           
+        }
+        
+    }	
+    
+    .radius-dis {
+        position: absolute;
+        display: block;
+        top: 20px;
+        left: 0;
+        padding: 0 20px 5px 20px;
+        background: $yellow;
+        font-family: 'Jinky';
+        color: $royal-blue;
+        font-size: 40px;
+        line-height: 0.3;
+        height: 25px;
+        
+        
+    }
+    
+    .wppl-excerpt {	
+        float: left;
+        width: 300px;
+    }
+    
+    .wppl-info {
+        overflow: hidden;
+        padding: 0 10px 20px;
+        min-height:80px;
+        
+        div span {	
+            font-weight:bold;
+        }
+        
+        
+        .wppl-address {
+            @extend .info;
+            @extend .info.address;
+            border: none !important;
+            
+        }
+        
+        .wppl-website {
+            @extend .info;
+            @extend .info.website;
+            border: none !important;
+            span {
+                display: none;
+            }
+        }
+    }
+    
+    .wppl-taxes-wrapper {
+        padding: 0 10px;
+        margin-bottom: 10px;
+                .wppl-taxes {
+                    span { display: none; }
+                }
+        
+    }
+}
+
+
+
+
+.wppl-single-result .wppl-drive-dis {	
+    margin-right: 10px;
+    float:left;
+}	
+
+.wppl-single-result .wppl-get-directions {	
+       @extend .info;
+       @extend .info.directions;
+       border: none !important;
+}	
+
+
+#wppl-output-wrapper .wppl-get-directions a:link, #wppl-output-wrapper .wppl-get-directions a:visited, 
+#wppl-output-wrapper .wppl-website a:link, #wppl-output-wrapper .wppl-website a:visited  {
+    color: $text;
+}	
+
+#wppl-output-wrapper .wppl-get-directions a:hover, #wppl-output-wrapper .wppl-get-directions a:active, 
+#wppl-output-wrapper .wppl-website a:hover, #wppl-output-wrapper .wppl-website a:active {
+   
+}
